@@ -9,3 +9,23 @@ export const sectionIds = {
   sectionParticipations: uniquePortfolio + 'participations-section',
   sectionVideos: uniquePortfolio + 'workshops-and-talks',
 };
+
+export const iconsMapString = {
+  eye: 'eye',
+  database: 'database',
+  reactjs: 'reactjs',
+  robot: 'robot',
+  linkedin: 'linkedin',
+  facebook: 'facebook',
+  instagram: 'instagram',
+  reddit: 'reddit',
+  email: 'email',
+  github: 'github',
+  goTop: 'goTop',
+  twitter: 'twitter',
+  codepen: 'codepen',
+  youtube: 'youtube',
+  wrytin: 'wrytin',
+  wordpress: 'wordpress',
+  minimize: 'minimize',
+};

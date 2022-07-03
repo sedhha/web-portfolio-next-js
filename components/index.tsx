@@ -1,6 +1,8 @@
 import React from 'react';
 import TopNavigation from '@/components/NavItem';
 import TopView from '@/components/TopView';
+import MainSection from '@/components/MainSection';
+
 type Props = {};
 
 export default function Index({}: Props) {
@@ -8,6 +10,7 @@ export default function Index({}: Props) {
     <React.Fragment>
       <TopNavigation />
       <TopView />
+      <MainSection />
     </React.Fragment>
   );
 }
