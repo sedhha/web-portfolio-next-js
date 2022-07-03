@@ -1,0 +1,17 @@
+.StyledScrollBarClass {
+	&::-webkit-scrollbar {
+		width: 1rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 6px $scrollbar-theme-color-track;
+		-webkit-box-shadow: inset 0 0 6px $scrollbar-theme-color-track;
+		border-radius: 1rem;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 1rem;
+		box-shadow: inset 0 0 6px $scrollbar-theme-color-thumb;
+		-webkit-box-shadow: inset 0 0 6px $scrollbar-theme-color-thumb;
+	}
+}
