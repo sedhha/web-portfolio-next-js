@@ -7,6 +7,9 @@ import { sectionAbout } from '@/constants/index';
 import Features from '@/components/MainSection/features';
 import { sectionFeatures } from '@/constants/index';
 
+import Projects from '@/components/MainSection/projects';
+import { sectionProjects } from '@/constants/index';
+
 enum ActionTypes {
   about = 'navButtonActions__about__',
   projects = 'projectActions__projects__',
@@ -35,6 +38,13 @@ export default function Main() {
         }
       />
       <Features sectionFeatures={sectionFeatures} classes={classes} />
+      <Projects
+        sectionProjects={sectionProjects}
+        classes={classes}
+        onClickCallback={(buttonTerm: string) =>
+          onActionCallback(ActionTypes.projects, buttonTerm)
+        }
+      />
 
       {/* <MapFeaturesSection sectionFeatures={sectionFeatures} classes={classes} />
       <MapProjects
