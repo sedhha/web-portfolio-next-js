@@ -1,0 +1,297 @@
+import { nanoid } from 'nanoid';
+import { sectionIds } from './common';
+
+export interface IParticipationElements {
+  id: string;
+  eventName: string;
+  labelTag: string;
+  labelTagNeeded: boolean;
+  badgeClass?: 'HonorLabel_gold' | 'HonorLabel_silver' | 'HonorLabel_brown';
+  imgSource: string;
+  imgAlt: string;
+  style?: Record<string, string | number>;
+}
+export interface ISectionParticipations {
+  id: string;
+  showSection: boolean;
+  heading: string;
+  background: string;
+  elements: IParticipationElements[];
+}
+
+export const sectionParticipations: ISectionParticipations = {
+  id: sectionIds.sectionParticipations,
+  showSection: true,
+  heading: 'Events And Participations',
+  background: '/web-assets/participations/hero2.jpg',
+
+  elements: [
+    {
+      id: nanoid(),
+      eventName: 'HackForGood: Grab Hackathon 2022',
+      labelTag: 'Second Runner Up',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/second-runner-up-grab.jpg',
+      imgAlt: 'HackForGood: Grab Hackathon 2022 - Second Runner Up',
+      style: { left: '-35%', top: '2%' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'HackForGood: Grab Hackathon 2022',
+      labelTag: 'Most Unique Submission',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/most-unique-solution-grab.jpg',
+      imgAlt: 'HackForGood: Grab Hackathon 2022 - Most Unique Submission',
+      style: { left: '-35%', top: '2%' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'Principal Hack 2022',
+      labelTag: 'Community Mentoring App Award',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/principalHack.jpg',
+      imgAlt: 'Principal Hack 2022',
+      style: { left: '-35%', top: '2%' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'MegaHack 2022',
+      labelTag: 'Global NGO Prize',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/app-overview.gif',
+      imgAlt: 'MegaHack 2022, Global NGO Price',
+      style: { left: '-35%', top: '2%' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'UIPath Innovation RPA Hack 2021',
+      labelTag: 'Bright Idea Finalist',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_silver',
+      imgSource: '/web-assets/participations/intellipick.jpg',
+      imgAlt: 'UiPath RPA 2021 Bright Idea Finalist',
+      style: { left: '-35%', top: '2%' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'UW BlockChain Hack',
+      labelTag: '2 Time Winner',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/uw_bc.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+      style: { left: '-35%', top: '2%' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'Flutterthon 2020',
+      labelTag: 'Winner',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/flutterthon.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+    {
+      id: nanoid(),
+      eventName: 'Autodesk Designation',
+      labelTag: 'Winner',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/fusion360.jpg',
+
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+    {
+      id: nanoid(),
+      eventName: 'PennApps XX',
+      labelTag: 'Winner',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/thirdeye.jpg',
+
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+    {
+      id: nanoid(),
+      eventName: 'Hack Harvard',
+      labelTag: 'Winner',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/agrobuddy.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+    {
+      id: nanoid(),
+      eventName: 'Summer BioFest VIT',
+      labelTag: 'Winner',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/biofest.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+    {
+      id: nanoid(),
+      eventName: 'Robots For Humanity',
+      labelTag: 'Winner',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/r4h.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+    {
+      id: nanoid(),
+      eventName: 'ASME Mechanical Conference',
+      labelTagNeeded: true,
+      labelTag: 'Winner',
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/mech_conf.jpg',
+      imgAlt: 'ASME Mechanical Conference',
+    },
+    {
+      id: nanoid(),
+      eventName: 'ASME Reverse Engineering',
+      labelTag: 'Winner',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/reverse_engineering.jpg',
+      imgAlt: 'ASME Reverse Engineering',
+    },
+    {
+      id: nanoid(),
+      eventName: 'ASME Formula Balloon',
+      labelTag: 'First Runner Up',
+      badgeClass: 'HonorLabel_gold',
+      labelTagNeeded: true,
+      imgSource: '/web-assets/participations/formula_balloon.jpg',
+      imgAlt: 'Formula Balloon',
+      style: { left: '-30%', top: '2%', fontSize: '1.3rem' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'Junior Mathematics Olympiad',
+      labelTag: '28th All India Rank',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_gold',
+      imgSource: '/web-assets/participations/jmo.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+      style: { left: '-30%', top: '4%', fontSize: '1.2rem' },
+    },
+
+    {
+      id: nanoid(),
+      eventName: 'Indian Rover Challenge 2019',
+      labelTag: '4th Rank (Global)',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_silver',
+      imgSource: '/web-assets/participations/irc2019.jpg',
+      imgAlt: 'ASME Reverse Engineering',
+      style: { left: '-34%', top: '-2%', fontSize: '1.2rem' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'LVPEI EyeCare Hack',
+      labelTag: 'Best AT&T Category Award',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_silver',
+      imgSource: '/web-assets/participations/lvpei.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+      style: { left: '-35%', top: '9%', fontSize: '1.3rem' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'Select Makeathon',
+      labelTag: 'Top 10 Qualifier',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_silver',
+      imgSource: '/web-assets/participations/selectMakeathon.jpg',
+      imgAlt: 'ASME Reverse Engineering',
+      style: { left: '-35%', top: '-2%', fontSize: '1.4rem' },
+    },
+
+    {
+      id: nanoid(),
+      eventName: 'Spark Blockchain University Hackathon',
+      labelTag: 'Honorable Mention: LivePeer API',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_brown',
+      imgSource: '/web-assets/participations/waterchain.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+      style: { left: '-35%', top: '7%', fontSize: '1rem' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'University Rover Challenge 2018',
+      labelTag: '19th Global Rank',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_brown',
+      imgSource: '/web-assets/participations/rx2018.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+      style: { left: '-35%', top: '-3%', fontSize: '1.2rem' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'Indian Rover Challenge 2018',
+      labelTag: 'Event Co-ordinator',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_brown',
+      imgSource: '/web-assets/participations/irc2018.jpg',
+      imgAlt: 'ASME Reverse Engineering',
+      style: { left: '-30%', top: '7%', fontSize: '1.3rem' },
+    },
+    {
+      id: nanoid(),
+      eventName: 'Science Olympiad Foundation',
+      labelTag: '3 Times Silver/Bronze Medalist',
+      labelTagNeeded: true,
+      badgeClass: 'HonorLabel_brown',
+      imgSource: '/web-assets/participations/sof.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+      style: { left: '-35%', top: '7%', fontSize: '1rem' },
+    },
+
+    {
+      id: nanoid(),
+      eventName: 'Design to Print',
+      labelTagNeeded: false,
+      labelTag: 'Participant',
+      imgSource: '/web-assets/participations/designtoprint.jpg',
+      imgAlt: 'ASME Reverse Engineering',
+    },
+    {
+      id: nanoid(),
+      eventName: 'Dover Hackathon',
+      labelTagNeeded: false,
+      labelTag: 'Participant',
+      imgSource: '/web-assets/participations/doverHack.jpg',
+      imgAlt: 'Dover Hackathon',
+    },
+    {
+      id: nanoid(),
+      eventName: 'ASME eFest',
+      labelTagNeeded: false,
+      labelTag: 'Participant',
+      imgSource: '/web-assets/participations/efest_asme.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+    {
+      id: nanoid(),
+      eventName: 'SBU Hacks',
+      labelTagNeeded: false,
+      labelTag: 'Participant',
+      imgSource: '/web-assets/participations/sbuhacks.jpg',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+    {
+      id: nanoid(),
+      eventName: 'Raccoons Virtual Hackathon',
+      labelTagNeeded: false,
+      labelTag: 'Participant',
+      imgSource: '/web-assets/participations/raccoons.png',
+      imgAlt: 'ASME eFest Asia Pacific 2017',
+    },
+  ],
+};

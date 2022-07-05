@@ -8,6 +8,7 @@ export { sectionFeatures } from './features';
 export { sectionProjects } from './projects';
 export { sectionReferences } from './testimonials';
 export { sectionExperiences } from './experience';
+export { sectionParticipations } from './participations';
 
 // Export types from Other files
 export type { IAbout, IMainIntroContent } from './about';
@@ -28,3 +29,8 @@ export type {
 } from './testimonials';
 
 export type { IExperienceElements, IExperienceContent } from './experience';
+
+export type {
+  IParticipationElements,
+  ISectionParticipations,
+} from './participations';

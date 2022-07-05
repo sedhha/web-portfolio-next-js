@@ -1,0 +1,68 @@
+@import './Main.module.scss';
+
+.participationGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.6rem;
+  grid-row-gap: 0.6rem;
+  max-height: 45rem;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 1rem;
+  @include respond(big-desktop) {
+    grid-row-gap: 2.6rem;
+  }
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    max-height: 40rem;
+  }
+  &_item {
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2),
+        0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+}
+
+.ImageItem {
+  flex: auto;
+  width: 100%;
+  height: 20rem;
+
+  &_img {
+    height: 100%;
+  }
+  &_Label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0.6rem 0;
+  }
+}
+.HonorLabel {
+  margin: 1rem;
+  &_gold {
+    background-color: #ffc247;
+    color: #ac832f;
+  }
+  &_silver {
+    background-color: #e5e7e6;
+    color: #777777;
+  }
+  &_brown {
+    color: #c53929;
+    background-color: #f7dfb1;
+  }
+  padding: 0.25rem 5rem;
+  font-weight: 900;
+  font-size: 1.2rem;
+}

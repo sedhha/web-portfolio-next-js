@@ -16,6 +16,9 @@ import { sectionReferences } from '@/constants/index';
 import Experience from '@/components/MainSection/experience';
 import { sectionExperiences } from '@/constants/index';
 
+import Participations from '@/components/MainSection/participations';
+import { sectionParticipations } from '@/constants/index';
+
 enum ActionTypes {
   about = 'navButtonActions__about__',
   projects = 'projectActions__projects__',
@@ -65,13 +68,15 @@ export default function Main() {
           onActionCallback(ActionTypes.workExperience, identifier)
         }
       />
+      <Participations
+        sectionsParticipations={sectionParticipations}
+        onParticipationActionHandler={(identifier: string) =>
+          onActionCallback(ActionTypes.workExperience, identifier)
+        }
+      />
 
       {/* 
-      <MapExperienceandCocurricular
-        exprerienceContent={sectionExperiences}
-        classes={classes}
-        onWorkExperienceHandler={onWorkExperienceHandler}
-      />
+
 
       <MappingParticipants
         sectionsParticipations={sectionParticipations}
