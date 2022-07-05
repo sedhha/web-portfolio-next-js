@@ -1,0 +1,119 @@
+@import '../Main.module.scss';
+
+.MappingVideo {
+  background-color: $section-background-color;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.VideoGrid {
+  display: grid;
+  padding: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  // grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1.5rem;
+  max-height: 45rem;
+  overflow-y: scroll;
+  // @include respond(tab-port) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    max-height: 40rem;
+  }
+}
+.GridElements {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.4s all ease;
+  &:hover {
+    transform: scale(0.96);
+  }
+}
+.GridLabel {
+  font-size: 1.4rem;
+  &_green,
+  &_orange,
+  &_blue {
+    font-size: 1.8rem;
+    padding: 0;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+    margin: 0.5rem 0;
+
+    @include respond(laptop-mid-size) {
+      font-size: 1.4rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone-mid) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+  }
+  &_green {
+    background: $green-linear-gradient;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &_blue {
+    background: $blue-linear-gradient;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &_orange {
+    background: $orange-linear-gradient;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.YTPlayerReact {
+  position: relative;
+}
+
+.YTTriggerActive,
+.YTTriggerPassive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.YTTriggerActive {
+  z-index: 100;
+}
+.YTTriggerPassive {
+  z-index: -1;
+}
+
+.Videos {
+  display: flex;
+  height: 30rem;
+  margin-bottom: 2rem;
+
+  @include respond(big-desktop) {
+    height: 40rem;
+  }
+
+  @include respond(tab-port) {
+    height: 28rem;
+  }
+}
+
+.VideoElements_RP {
+  width: 100%;
+}

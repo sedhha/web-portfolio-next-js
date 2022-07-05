@@ -19,6 +19,9 @@ import { sectionExperiences } from '@/constants/index';
 import Participations from '@/components/MainSection/participations';
 import { sectionParticipations } from '@/constants/index';
 
+import Videos from '@/components/MainSection/videos';
+import { sectionVideos } from '@/constants/index';
+
 enum ActionTypes {
   about = 'navButtonActions__about__',
   projects = 'projectActions__projects__',
@@ -74,19 +77,12 @@ export default function Main() {
           onActionCallback(ActionTypes.workExperience, identifier)
         }
       />
-
-      {/* 
-
-
-      <MappingParticipants
-        sectionsParticipations={sectionParticipations}
-        onParticipationActionHandler={onParticipationActionHandler}
-      />
-
-      <MappingVideos
+      <Videos
         sectionVideos={sectionVideos}
-        onVideoClickHandler={onVideoClickHandler}
-      /> */}
+        onVideoClickHandler={(identifier: string) =>
+          onActionCallback(ActionTypes.videos, identifier)
+        }
+      />
     </main>
   );
 }
