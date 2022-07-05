@@ -7,19 +7,24 @@ export { sectionAbout } from './about';
 export { sectionFeatures } from './features';
 export { sectionProjects } from './projects';
 export { sectionReferences } from './testimonials';
+export { sectionExperiences } from './experience';
 
 // Export types from Other files
 export type { IAbout, IMainIntroContent } from './about';
 export type { IFeatures, ISection } from './features';
+
 export type {
   IProjectComponent,
   ISectionProject,
   IFeatureList,
   IButtonList,
 } from './projects';
+
 export type {
   IBackgroundSpecs,
   IUserTestimonial,
   ISocialHandle,
   ITestimonialComponent,
 } from './testimonials';
+
+export type { IExperienceElements, IExperienceContent } from './experience';

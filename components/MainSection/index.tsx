@@ -13,6 +13,9 @@ import { sectionProjects } from '@/constants/index';
 import Testimonials from '@/components/MainSection/testimonials';
 import { sectionReferences } from '@/constants/index';
 
+import Experience from '@/components/MainSection/experience';
+import { sectionExperiences } from '@/constants/index';
+
 enum ActionTypes {
   about = 'navButtonActions__about__',
   projects = 'projectActions__projects__',
@@ -55,14 +58,15 @@ export default function Main() {
           onActionCallback(ActionTypes.testimonials, identifier)
         }
       />
-
-      {/* <MapFeaturesSection sectionFeatures={sectionFeatures} classes={classes} />
-
-      <MapTestimonials
-        testimonialComponent={sectionReferences}
+      <Experience
+        exprerienceContent={sectionExperiences}
         classes={classes}
-        onTestimonialActionHandler={onTestimonialActionHandler}
+        onWorkExperienceHandler={(identifier: string) =>
+          onActionCallback(ActionTypes.workExperience, identifier)
+        }
       />
+
+      {/* 
       <MapExperienceandCocurricular
         exprerienceContent={sectionExperiences}
         classes={classes}
