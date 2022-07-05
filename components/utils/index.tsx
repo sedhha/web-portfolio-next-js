@@ -48,3 +48,19 @@ export const getIconByName = (IconName: iconsMapKey, props: any) => {
   const Component = iconsMap[IconName];
   return <Component {...props} />;
 };
+
+export const getMainHeading = (
+  headingString: string,
+  headingStyle: Record<string, string | number>,
+  classes: Record<string, string>
+) => {
+  return (
+    <div className={classes.centetText}>
+      <h2
+        className={[classes.headingSecondary].join(' ')}
+        style={headingStyle || {}}>
+        {headingString || 'WHO AM I?'}
+      </h2>
+    </div>
+  );
+};

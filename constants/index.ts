@@ -6,6 +6,7 @@ export { topHeaders } from './topHeaders';
 export { sectionAbout } from './about';
 export { sectionFeatures } from './features';
 export { sectionProjects } from './projects';
+export { sectionReferences } from './testimonials';
 
 // Export types from Other files
 export type { IAbout, IMainIntroContent } from './about';
@@ -16,3 +17,9 @@ export type {
   IFeatureList,
   IButtonList,
 } from './projects';
+export type {
+  IBackgroundSpecs,
+  IUserTestimonial,
+  ISocialHandle,
+  ITestimonialComponent,
+} from './testimonials';
