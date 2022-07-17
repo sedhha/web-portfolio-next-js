@@ -1,6 +1,11 @@
 import { navItemsHeader as navItems } from '@/constants/navItems';
 import React from 'react';
 import classes from './navItem.module.scss';
+import analytics, {
+  AVAILABLE_EVENT_TYPES,
+  eventTypes,
+  ActionTypes,
+} from '@/utils/analytics';
 
 type NavItemKeyType = keyof typeof navItems;
 
@@ -18,7 +23,7 @@ export default function TopNavigator() {
           className={classes['navigation__item']}
           onClick={() => {
             setToggle(false);
-            //TODO: Update Actions and Push Data to Backend - 001
+            analytics.logUserEvents(ActionTypes.closeNavigator);
           }}>
           <a
             href={'#' + navItems[element as NavItemKeyType].href}
@@ -42,7 +47,10 @@ export default function TopNavigator() {
       <label
         onClick={() => {
           setToggle((previous) => !previous);
-          //TODO: Update Actions and Push Data to Backend - 001 [Same]
+          const actionType = toggle
+            ? ActionTypes.openNavigator
+            : ActionTypes.closeNavigator;
+          analytics.logUserEvents(actionType);
         }}
         className={classes['navigation__button']}>
         <span className={classes['navigation__icon']}>&nbsp;</span>

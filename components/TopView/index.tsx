@@ -3,6 +3,7 @@ import classes from './components.module.scss';
 
 import { Link } from 'react-scroll';
 import { topHeaders as topHeader, sectionIds } from '@/constants/index';
+import analytics, { ActionTypes } from '@/utils/analytics';
 
 export default function TopHeader() {
   return (
@@ -56,7 +57,7 @@ export default function TopHeader() {
             ' '
           )}
           onClick={() => {
-            //TODO: Action Id - 001 - navButtonActions__knowMoreToTop__
+            analytics.logUserEvents(ActionTypes.gotoTop);
           }}>
           {topHeader.buttonText || 'Know More'}
         </Link>

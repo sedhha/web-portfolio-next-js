@@ -21,23 +21,17 @@ import { sectionParticipations } from '@/constants/index';
 
 import Videos from '@/components/MainSection/videos';
 import { sectionVideos } from '@/constants/index';
-
-enum ActionTypes {
-  about = 'navButtonActions__about__',
-  projects = 'projectActions__projects__',
-  testimonials = 'testimonialActions__testimonal__',
-  workExperience = 'workExperienceActions__work__',
-  participations = 'participationActions__participations__',
-  videos = 'VideoViewActions__videoView__',
-}
+import analyticsEvents, {
+  AVAILABLE_EVENT_TYPES,
+  eventTypes,
+  ActionTypes,
+} from '@/utils/analytics';
 
 export default function Main() {
   //Complete Main Body
 
   const onActionCallback = (actionType: ActionTypes, buttonTerm: string) => {
-    console.log('DIspatching with = ', actionType + buttonTerm);
-    // TODO: Update Actions and Dispatch to backend: 'navButtonActions__about__' + buttonTerm
-    // dispatch(updateActions(actionType + buttonTerm));
+    analyticsEvents.logUserEvents(actionType, buttonTerm);
   };
 
   return (
