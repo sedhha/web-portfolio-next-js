@@ -30,6 +30,12 @@ export const sectionVideos: ISectionVideos = {
       {
         id: nanoid(),
         customThumbnail: false,
+        video_id: 'Jp1qxu0L_GY',
+        heading: 'How is JS both single threaded and asynchronous?',
+      },
+      {
+        id: nanoid(),
+        customThumbnail: false,
         video_id: 'F5_6-21GaxM',
         heading: 'QuickBooks oAuth: Refresh and Regenerate Tokens',
       },
