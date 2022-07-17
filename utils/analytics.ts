@@ -43,19 +43,27 @@ const logPageEvents = (
   event: AVAILABLE_EVENT_TYPES,
   metadata?: Record<string, string | number>
 ) => {
-  if (analytics) logEvent(analytics, event, { ...metadata, user: userDetails });
+  const eventData = { ...metadata, user: userDetails };
+  if (process.env.FIREBASE_DEPLOYMENT_ENVIRONMENT !== 'production') {
+    console.log('Not Logging the Event in Dev Mode: ', eventData);
+  }
+  if (analytics) logEvent(analytics, event, eventData);
   else {
     console.error('Unsupported Browser for Ayts Ops');
   }
 };
 
 const logUserEvents = (actionType: ActionTypes, actionKeyWord?: string) => {
+  const eventData = {
+    action: actionType,
+    user: userDetails,
+    actionKeyWord: actionKeyWord ?? 'NA',
+  };
+  if (process.env.FIREBASE_DEPLOYMENT_ENVIRONMENT !== 'production') {
+    console.log('Not Logging the Event in Dev Mode: ', eventData);
+  }
   if (analytics)
-    logEvent(analytics, eventTypes.USER_ACTION_CALLBACK, {
-      action: actionType,
-      user: userDetails,
-      actionKeyWord: actionKeyWord ?? 'NA',
-    });
+    logEvent(analytics, eventTypes.USER_ACTION_CALLBACK, eventData);
   else {
     console.error('Unsupported Browser for Ayts Ops');
   }
