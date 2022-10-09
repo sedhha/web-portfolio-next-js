@@ -5,7 +5,7 @@ import styles from '@/styles/index.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-src={'/loading.gif'}>
       <Head>
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
